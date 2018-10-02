@@ -1,8 +1,9 @@
+require('dotenv').config();
 const { CronJob } = require('cron');
 const backup = require('./src/backup.js');
+const message = require('./src/message.js');
 
-backup.start();
-// new CronJob('* * * * * *', () => {
-//   backup.copyDir();
-//   // console.log('Hello');
-// }, null, true);
+message.startUp();
+new CronJob(process.env.BACKUP_INTERVAL, () => {
+  backup.start();
+}, null, true);
