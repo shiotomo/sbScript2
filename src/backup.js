@@ -1,13 +1,21 @@
 require('dotenv').config();
-
 const fs = require('fs-extra');
+const copyDir = require('copy-dir');
 
-exports.copyDir = () => {
-  // とりあえずhogeディレクトリをpiyoディレクトリにコピーするようにしている
-  // 将来的にここを変更
-  fs.readFile('./backup-list.txt', 'utf-8', (err, text) => {
-    // fs.copySync('./' + process.env.BACKUP_DIR, './piyo');
-    console.log(text);
+exports.start = function() {
+  if (!fs.exists('backup')) {
+    fs.mkdir('backup', (err) => {
+      console.log(err);
+    });
+  }
+
+  fs.readFile('./backup-list.txt', 'utf-8', (error, text) => {
+    copyDir(text, process.env.BACKUP_DIR, (err) => {
+      if (err) {
+        console.log(err);
+      } else {
+        console.log('Compleate backup !!');
+      }
+    });
   });
-  // console.log(process.env.BACKUP_DIR);
 }

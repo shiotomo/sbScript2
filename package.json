@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/shiotomo/sbScript2#readme",
   "dependencies": {
+    "copy-dir": "^0.4.0",
     "cron": "^1.4.1",
     "dotenv": "^6.0.0",
     "fs-extra": "^7.0.0",
