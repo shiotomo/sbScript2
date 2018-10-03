@@ -4,7 +4,7 @@ const fs = require('fs-extra');
 const copyDir = require('copy-dir');
 
 // バックアップをスタートするメソッド
-exports.start = function() {
+exports.start = function () {
   const backupDirectory = createDirctory();
 
   // backup-list.txtに記述されたパス先のディレクトリorファイルをバックアップ
