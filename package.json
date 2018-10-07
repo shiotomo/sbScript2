@@ -11,7 +11,7 @@
     "url": "git+https://github.com/shiotomo/sbScript2.git"
   },
   "author": "shiotomo",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/shiotomo/sbScript2/issues"
   },
