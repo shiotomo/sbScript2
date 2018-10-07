@@ -8,7 +8,7 @@ sbScript2は、サーバのバックアップを定期的に、手軽に、行�
 - Node.js v10.11.0
 
 ## 使い方
-__事前準備__
+__事前準備__  
 .envを作成します。  
 .env.sampleがテンプレートとなっているので、それをコピーしてください。  
 .envにはバックアップ先のディレクトリとバックアップを取る周期を記述します。
@@ -28,13 +28,31 @@ BACKUP_DIR="00 00 00 * * *"
 - 月: 0-11
 - 週: 0-6
 
+backup-list.txtを作成します。
+backup-list.txtにバックアップを取りたいディレクトリのパスを書き込んでおきます。  
+
+backup-list.txtを作成するときのルール  
+- 最後に/をいれない
+- リストとして書いていく
+ 
+作成例)
+```
+/home/hoge/piyo
+/home/hoge/fuga
+```
+
+悪い例)
+```
+/home/hoge/piyo/ // 最後に/が入っている
+```
+
 __実行__
 ```
 node index.js
 ```
 
 ## sbScriptとの違い
-sbScriptとの違いは以下のとおりです。 
+sbScriptとの違いは以下のとおりです。   
 sbScript: https://github.com/shiotomo/sbScript
 
 |              |sbScript|sbScript2|
