@@ -28,7 +28,7 @@ BACKUP_DIR="00 00 00 * * *"
 - 月: 0-11
 - 週: 0-6
 
-backup-list.txtを作成します。
+backup-list.txtを作成します。  
 backup-list.txtにバックアップを取りたいディレクトリのパスを書き込んでおきます。  
 
 backup-list.txtを作成するときのルール  
