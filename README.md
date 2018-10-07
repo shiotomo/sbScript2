@@ -34,7 +34,8 @@ node index.js
 ```
 
 ## sbScriptとの違い
-sbScript(https://github.com/shiotomo/sbScript)との違いは以下のとおりです。 
+sbScriptとの違いは以下のとおりです。 
+sbScript: https://github.com/shiotomo/sbScript
 
 |              |sbScript|sbScript2|
 |--------------|--------|---------|
